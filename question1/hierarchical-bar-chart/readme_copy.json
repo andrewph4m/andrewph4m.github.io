@@ -1,0 +1,266 @@
+{
+    "name": "gamesales",
+    "children": [
+     {
+      "name": "2012",
+      "children": [
+       {
+        "name": "Action", "size": 113.24
+       },
+       {
+        "name": "Adventure", "size": 5.44
+       },
+       {
+        "name": "Fighting", "size": 9.18
+       },
+       {
+        "name": "Misc", "size": 22.19
+       },
+       {
+        "name": "Platform", "size": 18.29
+       },
+       {
+        "name": "Puzzle", "size": 1.69
+       },
+       {
+        "name": "Racing", "size": 13.41
+       },
+       {
+        "name": "Role-Playing", "size": 38.12
+       },
+       {
+        "name": "Shooter", "size": 67.34
+       },
+       {
+        "name": "Simulation", "size": 12.24
+       },
+       {
+        "name": "Sports", "size": 29.12
+       },
+       {
+        "name": "Strategy", "size": 2.3
+       }
+      ]
+     },
+     {
+        "name": "2013",
+        "children": [
+         {
+          "name": "Action", "size": 120.63
+
+         },
+         {
+          "name": "Adventure", "size": 5.94
+
+         },
+         {
+          "name": "Fighting", "size": 7.04
+
+         },
+         {
+          "name": "Misc", "size": 24.63
+
+         },
+         {
+          "name": "Platform", "size": 24.58
+
+         },
+         {
+          "name": "Puzzle", "size": 9.5
+
+
+         },
+         {
+          "name": "Racing", "size": 12.01
+
+
+         },
+         {
+          "name": "Role-Playing", "size": 44.42
+         },
+         {
+          "name": "Shooter", "size": 57.99
+
+         },
+         {
+          "name": "Simulation", "size": 7.1
+         },
+         {
+          "name": "Sports", "size": 40.19
+         },
+         {
+          "name": "Strategy", "size": 3.36
+
+         }
+        ]
+       },
+       {
+        "name": "2014",
+        "children": [
+         {
+          "name": "Action", "size": 94.77
+         },
+         {
+          "name": "Adventure", "size": 5.56
+
+         },
+         {
+          "name": "Fighting", "size": 15.83
+
+         },
+         {
+          "name": "Misc", "size": 23.33
+
+         },
+         {
+          "name": "Platform", "size": 8.78
+
+         },
+         {
+          "name": "Puzzle", "size": 1.49
+
+         },
+         {
+          "name": "Racing", "size": 16.33
+
+         },
+         {
+          "name": "Role-Playing", "size": 43.21
+
+         },
+         {
+          "name": "Shooter", "size": 62.76
+
+         },
+         {
+          "name": "Simulation", "size": 7.6
+
+         },
+         {
+          "name": "Sports", "size": 44.76
+
+         },
+         {
+          "name": "Strategy", "size": 6.3
+
+         }
+        ]
+       },
+       {
+        "name": "2015",
+        "children": [
+         {
+          "name": "Action", "size": 69.77
+
+         },
+         {
+          "name": "Adventure", "size": 8.03
+
+
+         },
+         {
+          "name": "Fighting", "size": 7.87
+
+
+
+         },
+         {
+          "name": "Misc", "size": 11.52
+
+
+         },
+         {
+          "name": "Platform", "size": 6.06
+
+
+         },
+         {
+          "name": "Puzzle", "size": 7.2
+
+
+         },
+         {
+          "name": "Racing", "size": 7.86
+
+
+         },
+         {
+          "name": "Role-Playing", "size": 35.55
+
+
+         },
+         {
+          "name": "Shooter", "size": 66.12
+
+         },
+         {
+          "name": "Simulation", "size": 4.83
+
+         },
+         {
+          "name": "Sports", "size": 40.55
+
+         },
+         {
+          "name": "Strategy", "size": 6.2
+
+         }
+        ]
+       },
+       {
+        "name": "2016",
+        "children": [
+         {
+          "name": "Action", "size": 29.68
+
+         },
+         {
+          "name": "Adventure", "size": 3.62
+
+         },
+         {
+          "name": "Fighting", "size": 4.38
+
+         },
+         {
+          "name": "Misc", "size": 2.63
+
+         },
+         {
+          "name": "Platform", "size": 3.15
+
+         },
+         {
+          "name": "Puzzle", "size": 1
+
+         },
+         {
+          "name": "Racing", "size": 2.71
+
+
+
+         },
+         {
+          "name": "Role-Playing", "size": 17.69
+
+         },
+         {
+          "name": "Shooter", "size": 36.31
+
+         },
+         {
+          "name": "Simulation", "size": 9.4
+
+         },
+         {
+          "name": "Sports", "size": 23.29
+
+         },
+         {
+          "name": "Strategy", "size": 4.2
+
+         }
+        ]
+       }
+    ]
+   }

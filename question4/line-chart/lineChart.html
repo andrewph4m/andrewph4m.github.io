@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<style>
+  .line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.label {
+  text-anchor: middle;
+}
+
+.label rect {
+  fill: white;
+}
+
+.label-key {
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <!-- Add 2 buttons -->
+<button class ="btn btn-md btn-primary" onclick="update(data1)">Console sales</button>
+<button class ="btn btn-md btn-primary" onclick="update(data2)">Video game sales</button>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+
+    // Create 2 datasets
+    var data1 = [
+       {year: "2008", value: 89.23},
+       {year: "2009", value: 81.87},
+       {year: "2010", value: 74.53},
+       {year: "2011", value: 69.04},
+       {year: "2012", value: 54.31},
+       {year: "2013", value: 48.62},
+       {year: "2014", value: 45.25},
+       {year: "2015", value: 41.95},
+       {year: "2016", value: 37.66},
+       {year: "2017", value: 46.88},
+       {year: "2018", value: 45.73}
+    ];
+    
+    var data2 = [
+        {year: "2012", value: 332.56},
+       {year: "2013", value: 348.84},
+       {year: "2014", value: 318.21},
+       {year: "2015", value: 259.50},
+       {year: "2016", value: 124.83}
+    ];
+    
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 30, bottom: 30, left: 50},
+        width = 550 - margin.left - margin.right,
+        height = 400 - margin.top - margin.bottom,
+        labelPadding = 3;
+        
+        
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom + 100)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    // Initialise a X axis:
+    var x = d3.scaleLinear().range([0,width]);
+    var xAxis = d3.axisBottom().scale(x);
+    svg.append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .attr("class","myXaxis")
+
+    
+    // Initialize an Y axis
+    var y = d3.scaleLinear().range([height, 0]);
+    var yAxis = d3.axisLeft().scale(y);
+    svg.append("g")
+      .attr("class","myYaxis")
+    
+    // Create a function that takes a dataset as input and update the plot:
+    function update(data) {
+    
+      // Create the X axis:
+      x.domain([ parseInt(d3.min(data, function(d) { return d.year })) , parseInt(d3.max(data, function(d) { return d.year }) )]);
+      svg.selectAll(".myXaxis").transition()
+        .duration(3000)
+        .call(xAxis);
+    
+      	svg.append("text")
+					.attr("class", "x label")
+					.attr("text-anchor", "end")
+					.attr("x", width)
+					.attr("y", height - 6)
+					.text("Year");
+      // create the Y axis
+      y.domain([30, d3.max(data, function(d) { return d.value  }) ]);
+      svg.selectAll(".myYaxis")
+        .transition()
+        .duration(3000)
+        .call(yAxis);
+    
+      // Create a update selection: bind to the new data
+      var u = svg.selectAll(".lineTest")
+        .data([data], function(d){ return d.year });
+    
+      // Updata the line
+      u
+        .enter()
+        .append("path")
+        .attr("class","lineTest")
+        .merge(u)
+        .transition()
+        .duration(3000)
+        .attr("d", d3.line()
+          .x(function(d) { return x(d.year); })
+          .y(function(d) { return y(d.value); }))
+          .attr("fill", "none")
+          .attr("stroke", "steelblue")
+          .attr("stroke-width", 2.5)
+
+     
+    }
+
+  
+  
+    
+    // At the beginning, I run the update function on the first dataset:
+    update(data1)
+    
+    </script>
+    
+</body>
+
+

@@ -1,0 +1,45 @@
+#chart {
+}
+
+p {
+/*
+background-image:url('parliament.jpg');
+background-position:40px 19px;	
+background-size:1000px 602px;
+background-repeat: no-repeat;
+*/
+}
+
+text {
+font: 14px sans-serif;
+}
+
+.dot {
+stroke: #000;
+}
+
+.axis path, .axis line {
+fill: none;
+stroke: #000;
+shape-rendering: crispEdges;
+}
+
+.label {
+fill: #777;
+}
+
+.year.label {
+font: 500 150px "Sans-serif";
+
+fill: #ddd;
+}
+
+.year.label.active {
+fill: #aaa;
+}
+
+.overlay {
+fill: none;
+pointer-events: all;
+cursor: ew-resize;
+}

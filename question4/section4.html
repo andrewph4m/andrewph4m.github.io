@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://getbootstrap.com/docs/4.5/examples/starter-template/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Video game and console sales · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+<link href="./section4_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="https://getbootstrap.com/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./section4_files/starter-template.css" rel="stylesheet">
+  <script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script></head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="../index.html">VG Visualisation</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="https://getbootstrap.com/docs/4.5/examples/jumbotron/#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sections</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" href="../question1/section1.html">Video game genres and ratings</a>
+              <a class="dropdown-item" href="../question2/section2.html">Popular genres</a>
+              <a class="dropdown-item" href="../question3/section3.html">Console sales</a>
+              <a class="dropdown-item active" href="#">Video game and console sales</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dataSource/dataSource.html">Data table</a>
+          </li>
+    
+        </ul>
+        <ul class="navbar-nav my-2 my-lg-0">  
+          <li class="nav-item">
+            <a class="nav-link" href="../about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../acknowledgements.html">Acknowledgements</a>
+          </li>
+        </ul>
+    
+      </div>
+    </nav>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <a class="btn btn-secondary" href="/question3/section3.html" role="button"> « Prev. section</a>
+    </div>
+    <div class="col-md">
+      
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-secondary disabled" href="/#"  role="button"> Next section »</a>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Video game genres - ratings and sales</h1>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    
+    <h3>Video games' ratings, number of release and sales between 2012 - 2016</h3>
+    <p>Lorum ipsum</p>
+      <iframe id="serviceFrameSend" src="agg-lineChart/index.html" width="1100" height="500"  frameborder="0"></iframe>
+    <h5>Legend</h5>
+    <p><span><i class="fa fa-square" style="color:steelblue"></i></span> Action 
+        | <span><i class="fa fa-square" style="color:#f6c800"></i></span> Adventure 
+        </p>
+  </div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+    <h3>Correlation between console sales and video game sales (in million units/copies)</h3>
+    <p class="text-muted">Time series: 2008 - 2018 for consoles; 2012 - 2016 for video game sales</p>
+    <p>From the figures on the chart above, there is a decline in video games and console purchase (in 2015-16). This can be explained by the lack of new video games and exciting exclusives being offered to the consoles sold at that time. This graph to the right is going to display the figures of console and video game sales in more detail.</p>
+    <table class="table table-sm">
+      <caption>List of users</caption>
+      <thead>
+        <tr>
+          <th scope="col">Year</th>
+          <th scope="col">Video game sales (million copies)</th>
+          <th scope="col">Console sales (million units)</th>    
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">2008</th>
+          <td>N/A</td>
+          <td>89.23
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2009</th>
+          <td>N/A</td>
+          <td>81.87
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2010</th>
+          <td>N/A</td>
+          <td>74.53
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2011</th>
+          <td>N/A</td>
+          <td>69.04
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2012</th>
+          <td>332.56
+          </td>
+          <td>54.31
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2013</th>
+          <td>348.84
+          </td>
+          <td>48.62
+          </td>
+      
+        </tr>
+        <tr>
+          <th scope="row">2014</th>
+          <td>318.21
+          </td>
+          <td>45.25
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2015</th>
+          <td>259.5
+          </td>
+          <td>41.95
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2016</th>
+          <td>124.83
+          </td>
+          <td>37.66
+          </td>
+      
+        </tr>
+        <tr>
+          <th scope="row">2017</th>
+          <td>N/A</td>
+          <td>46.88
+          </td>  
+        </tr>
+        <tr>
+          <th scope="row">2018</th>
+          <td>N/A</td>
+          <td>45.73
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<div class="col-md-6">
+    <iframe id="serviceFrameSend" src="line-chart/lineChart.html" width="600" height="550"  frameborder="0"></iframe>
+  </div>
+</div>
+
+<h3> Other sections </h3>
+<div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="../img/metacritic.png" alt="Card image cap" style="object-fit: cover; height: 100px; width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Genre sales & ratings</h5>
+        <p class="card-text">Genre: Sales, ratings and no. of games</p>
+        <a class="btn btn-secondary" href="/question1/section1.html" role="button">View details »</a>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../img/Biowars-Video-Game-Genres.jpg" alt="Card image cap" style="object-fit: cover; height: 100px; width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Favorite genres</h5>
+        <p class="card-text">Favorite genres by country</p>
+        <a class="btn btn-secondary" href="/question2/section2.html" role="button">View details »</a>
+      </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top" src="../img/consoles-800x369.jpg" alt="Card image cap" style="object-fit: cover; height: 100px; width: 100%;">
+        <div class="card-body">
+          <h5 class="card-title">Console sales</h5>
+          <p class="card-text">Console sales from 2008 to 2018 </p>
+          <a class="btn btn-secondary" href="/question3/section3.html" role="button">View details »</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main><!-- /.container -->
+<footer class="container">
+  <p> 2020 © Ha Nam Anh Pham</p>
+</footer>
+<script src="./section4_files/jquery-3.5.1.slim.min.js.download" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="./section4_files/bootstrap.bundle.min.js.download" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+
+</body></html>

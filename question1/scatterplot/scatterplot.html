@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<script>
+
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 30, bottom: 30, left: 60},
+        width = 500 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    var svg = d3.select("#my_dataviz")
+      .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+        .attr("transform",
+              "translate(" + margin.left + "," + margin.top + ")");
+    
+    //Read the data
+    d3.csv("critic_user_ratings.csv", function(data) {
+    
+      // Add X axis
+      var x = d3.scaleLinear()
+        .domain([1, 100])
+        .range([ 0, width ]);
+      svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+      
+				svg.append("text")
+					.attr("class", "x label")
+					.attr("text-anchor", "end")
+					.attr("x", width)
+          .attr("y", height - 6)
+          .attr("font-size", "15")
+					.text("Critic ratings (out of 100)");
+    
+    
+      // Add Y axis
+      var y = d3.scaleLinear()
+        .domain([1, 100])
+        .range([ height, 0]);
+      svg.append("g")
+        .call(d3.axisLeft(y));
+      
+        svg.append("text")
+					.attr("class", "y label")
+					.attr("text-anchor", "end")
+					.attr("y", 5)
+          .attr("dy", ".75em")
+          .attr("font-size", "15")
+					.attr("transform", "rotate(-90)")
+					.text("User ratings (out of 100)");
+    
+      // Color scale: give me a specie name, I return a color
+      var color = d3.scaleOrdinal()
+        .domain(["action", "adventure", "fighting", "misc", "platform", "puzzle", "racing", "role-playing", "shooter", "simulation", "sports", "strategy" ])
+        .range(['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928'])
+    
+        var colors = ['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928']
+     
+      // Add dots
+      svg.append('g')
+        .selectAll("dot")
+        .data(data)
+        .enter()
+        .append("circle")
+          .attr("class", function (d) { return "dot " + d.genre } )
+          .attr("cx", function (d) { return x(d.userscore); } )
+          .attr("cy", function (d) { return y(d.metascore); } )
+          .attr("r", 5)
+          .style("fill", function (d) { return color(d.genre) } )
+      
+
+    })
+    
+    </script>

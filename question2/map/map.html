@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorite genre</title>
+
+<style>
+</style>
+
+    </head>
+    <body style ="margin-left: 30">
+        <h1 style="font-size:60px; text-align:center;"></h1>
+        
+<!--        <hr style="border:2px solid black;">-->
+        <h3 style="text-align:center;"></h3>
+<!--        Add messages-->
+                <p style="text-align:center; margin-left: 30px;"></p>
+        
+                <p style="text-align:center"></p>
+        <div id="chart_div" ></div>
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type='text/javascript'>
+    
+//    Load function and error handing
+    function LoadGoogle()
+    {
+        if(typeof google != 'undefined' && google && google.load)
+        {
+             google.load('visualization', '1.1', {
+    'packages': ['geochart']
+});
+google.setOnLoadCallback(drawStuff);
+            
+//Load data array
+
+function drawStuff() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Country');
+    data.addColumn('string', 'Favorite Genre');
+    data.addRows([
+    ['Afghanistan','Adventure'],
+['Albania','Puzzle'],
+['Algeria','Sports'],
+['Andorra','Simulation'],
+['Angola','Action'],
+['Antigua and Barbuda','Puzzle'],
+['Argentina','Action'],
+['Armenia','Fighting'],
+['Australia','Shooter'],
+['Austria','Role-Playing'],
+['Azerbaijan','Misc'],
+['Bahamas','Role-Playing'],
+['Bahrain','Strategy'],
+['Bangladesh','Adventure'],
+['Barbados','Platform'],
+['Belarus','Fighting'],
+['Belgium','Strategy'],
+['Belize','Puzzle'],
+['Benin','Simulation'],
+['Bhutan','Simulation'],
+['Bolivia','Puzzle'],
+['Bosnia and Herzegovina','Adventure'],
+['Botswana','Role-Playing'],
+['Brazil','Role-Playing'],
+['Brunei Darussalam','Shooter'],
+['Bulgaria','Adventure'],
+['Burkina Faso','Role-Playing'],
+['Burundi','Role-Playing'],
+['Cabo Verde','Simulation'],
+['Cambodia','Puzzle'],
+['Cameroon','Misc'],
+['Canada','Shooter'],
+['Central African Republic','Role-Playing'],
+['Chad','Shooter'],
+['Chile','Simulation'],
+['China','Misc'],
+['Colombia','Misc'],
+['Comoros','Misc'],
+['Congo; Dem. Rep.','Puzzle'],
+['Congo; Rep.','Racing'],
+['Costa Rica','Simulation'],
+['Cote d Ivoir','Racing'],
+['Croatia','Sports'],
+['Cuba','Misc'],
+['Cyprus','Racing'],
+['Czech Republic','Role-Playing'],
+['Denmark','Simulation'],
+['Djibouti','Adventure'],
+['Dominica','Platform'],
+['Dominican Republic','Adventure'],
+['Ecuador','Fighting'],
+['Egypt; Arab Rep.','Strategy'],
+['El Salvador','Role-Playing'],
+['Equatorial Guinea','Sports'],
+['Eritrea','Strategy'],
+['Estonia','Action'],
+['Ethiopia','Sports'],
+['Fiji','Misc'],
+['Finland','Simulation'],
+['France','Role-Playing'],
+['Gabon','Shooter'],
+['Gambia','Sports'],
+['Georgia','Puzzle'],
+['Germany','Misc'],
+['Ghana','Puzzle'],
+['Greece','Racing'],
+['Grenada','Adventure'],
+['Greenland','Adventure'],
+['Guatemala','Puzzle'],
+['Guinea','Puzzle'],
+['Guinea-Bissau','Strategy'],
+['Guyana','Action'],
+['Haiti','Role-Playing'],
+['Honduras','Fighting'],
+['Hungary','Strategy'],
+['Iceland','Racing'],
+['India','Shooter'],
+['Indonesia','Role-Playing'],
+['Iran; Islamic Rep.','Platform'],
+['Iraq','Fighting'],
+['Ireland','Misc'],
+['Israel','Sports'],
+['Italy','Role-Playing'],
+['Jamaica','Strategy'],
+['Japan','Fighting'],
+['Jordan','Platform'],
+['Kazakhstan','Role-Playing'],
+['Kenya','Shooter'],
+['Kiribati','Simulation'],
+['Korea, Dem. People’s Rep.','Strategy'],
+['Korea, Rep.','Sports'],
+['Kuwait','Action'],
+['Kyrgyz Republic','Shooter'],
+['Lao PDR','Strategy'],
+['Latvia','Adventure'],
+['Lebanon','Role-Playing'],
+['Lesotho','Platform'],
+['Liberia','Shooter'],
+['Libya','Puzzle'],
+['Lithuania','Fighting'],
+['Luxembourg','Action'],
+['Macedonia; FYR','Misc'],
+['Madagascar','Adventure'],
+['Malawi','Simulation'],
+['Malaysia','Puzzle'],
+['Maldives','Racing'],
+['Mali','Fighting'],
+['Malta','Racing'],
+['Mauritania','Platform'],
+['Mauritius','Racing'],
+['Mexico','Adventure'],
+['Micronesia; Fed. Sts.','Puzzle'],
+['Moldova','Shooter'],
+['Mongolia','Sports'],
+['Montenegro','Platform'],
+['Morocco','Sports'],
+['Mozambique','Platform'],
+['Myanmar','Action'],
+['Namibia','Shooter'],
+['Nauru','Sports'],
+['Nepal','Role-Playing'],
+['Netherlands','Puzzle'],
+['New Zealand','Racing'],
+['Nicaragua','Misc'],
+['Niger','Shooter'],
+['Nigeria','Strategy'],
+['Norway','Shooter'],
+['Oman','Role-Playing'],
+['Pakistan','Shooter'],
+['Panama','Action'],
+['Papua New Guinea','Misc'],
+['Paraguay','Action'],
+['Peru','Simulation'],
+['Philippines','Strategy'],
+['Poland','Racing'],
+['Portugal','Misc'],
+['Qatar','Misc'],
+['Romania','Shooter'],
+['Russia','Strategy'],
+['Rwanda','Puzzle'],
+['Samoa','Action'],
+['Sao Tome and Principe','Simulation'],
+['Saudi Arabia','Platform'],
+['Senegal','Simulation'],
+['Serbia','Simulation'],
+['Seychelles','Platform'],
+['Sierra Leone','Fighting'],
+['Singapore','Misc'],
+['Slovak Republic','Adventure'],
+['Slovenia','Adventure'],
+['Solomon Islands','Puzzle'],
+['Somalia','Racing'],
+['South Africa','Simulation'],
+['Spain','Adventure'],
+['Sri Lanka','Sports'],
+['St. Kitts and Nevis','Action'],
+['St. Lucia','Platform'],
+['St. Vincent and the Grenadines','Racing'],
+['Sudan','Strategy'],
+['Suriname','Platform'],
+['Swaziland','Fighting'],
+['Sweden','Action'],
+['Switzerland','Role-Playing'],
+['Syrian Arab Republic','Role-Playing'],
+['Tajikistan','Strategy'],
+['Tanzania','Fighting'],
+['Thailand','Puzzle'],
+['Timor-Leste','Action'],
+['Togo','Misc'],
+['Tonga','Adventure'],
+['Trinidad and Tobago','Sports'],
+['Tunisia','Sports'],
+['Turkey','Strategy'],
+['Turkmenistan','Action'],
+['Tuvalu','Platform'],
+['Uganda','Platform'],
+['Ukraine','Puzzle'],
+['United Arab Emirates','Sports'],
+['United Kingdom','Platform'],
+['United States','Platform'],
+['Uruguay','Strategy'],
+['Uzbekistan','Puzzle'],
+['Vanuatu','Action'],
+['Venezuela; RB','Adventure'],
+['Vietnam','Shooter'],
+['Yemen Rep.','Fighting'],
+['Zambia','Action'],
+['Zimbabwe','Action']
+
+    ]);
+    
+//    Pickup colour
+    var categoryColors = {
+        'Action': '#a6cee3',
+        'Adventure': '#1f78b4',
+        'Fighting': '#b2df8a',
+        'Misc': '#33a02c',
+        'Platform': '#fb9a99',
+        'Puzzle': '#e31a1c',
+        'Racing': '#fdbf6f',
+        'Role-Playing': '#ff7f00',
+        'Shooter': '#cab2d6',
+        'Simulation': '#6a3d9a',
+        'Sports': '#ffff99',
+        'Strategy': '#b15928'
+    };
+
+//    Mapping
+    var categoryMapping = [];
+    var data2 = new google.visualization.DataTable();
+    data2.addColumn({label: data.getColumnLabel(0), type: 'string'});
+    data2.addColumn({label: data.getColumnLabel(1), type: 'number'});
+
+    for (var i = 0; i < data.getNumberOfRows(); i++) {
+        var category = data.getValue(i, 1);
+        var index = categoryMapping.indexOf(category);
+        if (index < 0) {
+            index = categoryMapping.length;
+            categoryMapping.push(category);
+        }
+        data2.addRow([data.getValue(i, 0), {v: categoryMapping.indexOf(category), f: category}]);
+    }
+
+    // Set chart options
+    var options = {
+        'title': 'World Alcoholic Favourite Drink',
+            'width': 1000,
+            'height': 500,
+        colorAxis: {
+            colors: categoryMapping.map(function(c) { return categoryColors[c]; }),
+            values: categoryMapping.map(function(c,i) { return i; })
+        }
+    };
+
+    // Draw the chat
+    var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+    chart.draw(data2, options);
+};
+   
+        }
+        
+//        Set time out for loading google
+        else
+        {
+            setTimeout(LoadGoogle, 30);
+        }
+    }
+
+    LoadGoogle();
+</script>
+
+
+    </body>
+</html>
