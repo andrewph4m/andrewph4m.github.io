@@ -49,7 +49,7 @@ var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
 var color = d3.scale.ordinal()
-    .range(['#a6cee3','#1f78b4','#b2df8a','#33a02c','#fb9a99','#e31a1c','#fdbf6f','#ff7f00','#cab2d6','#6a3d9a','#ffff99','#b15928']);
+    .range(['#8dd3c7','#ffffb3','#bebada','#fb8072','#80b1d3','#fdb462','#b3de69','#fccde5','#d9d9d9','#bc80bd']);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -233,6 +233,7 @@ d3.csv("stackedChart_updated.csv", function(error, data) {
       .attr("x", width - 24)
       .attr("y", 9)
       .attr("dy", ".35em")
+      .attr("font-family",'sans-serif')
       .style("text-anchor", "end")
       .text(function(d) { return d; });
 
