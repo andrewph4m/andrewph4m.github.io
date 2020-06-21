@@ -156,7 +156,7 @@ function up(d) {
       .style("opacity", 1);
 
   // Transition entering rects to the new x-scale.
-  // When the entering parent rect is done, make it visible!
+  // When the entering parent rect is done, make it visible
   enterTransition.select("rect")
       .attr("width", function(d) { return x(d.value); })
       .each("end", function(p) { if (p === d) d3.select(this).style("fill-opacity", null); });
