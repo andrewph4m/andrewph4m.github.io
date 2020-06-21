@@ -107,38 +107,173 @@
         </div>
         <div class="col-md-6">
           <h3 class="display-4"> Design sheet 1</h3>
+          <p>
+            The first design sheet outlines as much ideas as possible for the final design. The first sheet comprised ideas of each component of the visualisation package, as well as how can they be organised, developed, and implemented to ensure maximum impact and message to end-users. Figure 0-1 in the ‘Appendices’ section illustrates the first design sheet. It contains the idea, grouping and categorising ideas based on the general purpose and some plausible solutions.
+          </p>
+          <p>
+            We started off with clear messages and the intended target audience – outlining how gaming has evolved in terms of sales, ratings and console sales over the years and assist people in choosing the console which is right for them based on the figures.
+          </p>
+          <p>
+            The motivation behind this is to create a sense of flow which helps end-users understand the big picture to a more granular approach. Finally, it aims at giving users freedom to explore data by providing interactions to assist them in browsing the data. 
+          </p>
+          <p>
+            Some ideas for the visualisations are considered, namely bar chart, stacked bar chart, hierarchical bar chart and a combination of bar and line chart. Filters are also considered in this phase, along with the choice of frameworks, including <strong>D3 and HTML</strong>.
+          </p>
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-md-6">
           <h3 class="display-4"> Design sheet 2</h3>
+          <p>
+            The visualisation outlines the console sales through year, as well as zooming in the sales of genres in each console sales. Users can switch between two views by interacting directly with the visualisation. This design will be controlled with filters (based on console types and year). With that in mind, D3 provided options for granularity and transitioning, hence was chosen for this alternative.
+          </p>
+          <p>
+            The second view will also be a stacked bar chart, outlining the sales of each genre in that console sale through the year. Similar to the previous view, users can filter data by using provided features.
+          </p>
+          <p><strong>Operations</strong></p>
+          <ul>
+            <li>
+              Selecting filters will automatically filter the chart with the chosen values in consoles, year, and genres
+            </li>
+            <li>Hover: Users can hover over the chart to see detailed information of the visualisation</li>
+            <li>Zoom: Users can manipulate the view of the chart by going back and forth to a visualisation level.</li>
+          </ul>
+          <p><strong>Advantages</strong></p>
+          <ul>
+            <li>
+              Makes the user easy to transit between navigation
+            </li>
+            <li>The data provided is informative to the users, and the information are retrieved on demand</li>
+            <li>Can display and compare between multiple variables</li>
+          </ul>
+          <p><strong>Drawbacks</strong></p>
+          <ul>
+            <li>
+              D3 requires high level of technical skills
+            </li>
+            <li>Potentially too much interaction without informing users what can they do</li>
+          </ul>
+         
         </div>
         <div class="col-md-6">
-          <img src="img/5DS-Final_2.jpg" class="img-fluid" alt="Design sheet 1">
+          <img src="img/5DS-Final_2.jpg" class="img-fluid" alt="Design sheet 2">
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-md-6">
-          <img src="img/5DS-Final_3.jpg" class="img-fluid" alt="Design sheet 1">
+          <img src="img/5DS-Final_3.jpg" class="img-fluid" alt="Design sheet 3">
         </div>
         <div class="col-md-6">
           <h3 class="display-4"> Design sheet 3</h3>
+          <p>
+            Unlike the first design, the first view will be about genre sales on a horizontal bar chart throughout the proposed time period. The filters for this chart can be based on genre. Users will be able to click on a specific genre by clicking on the chart to see a breakdown on which consoles are selling the most games on the chosen genre. Similar to the first view, it will also be a horizontal bar chart and users can filter based on the console type, which outlines the overall sales figure for the games sold in each console, respectively.
+          </p>
+          <p>
+            Some ideas for motion chart are also considered to accommodate more dimensions in this sheet.
+          </p>
+          <p><strong>Operations</strong></p>
+          <ul>
+            <li>
+              Selecting filters will automatically filter the chart with the chosen values in consoles and genres
+            </li>
+            <li>Hover: Users can hover over the chart to see detailed information of the visualisation</li>
+            <li>Hierarchical: Users can expand data upon interacting with the chart.</li>
+            <li>Sorting data based on ascending and descending order</li>
+          </ul>
+          <p><strong>Advantages</strong></p>
+          <ul>
+            <li>
+              A bird-eye view of the whole data
+            </li>
+            <li>Display information between different dimensions in an efficient manner</li>
+            <li>Easy to use and manipulate data without ‘breaking’ the visualisation</li>
+          </ul>
+          <p><strong>Drawbacks</strong></p>
+          <ul>
+            <li>
+              No view on a specific time period/granularity is lost in year and year range
+            </li>
+            <li>Additional elements such as static text potentially have to be added to provide interactions with the visualisation</li>
+          </ul>
         </div>
       </div>
+      <hr>
       <div class="row">
         <div class="col-md-6">
           <h3 class="display-4"> Design sheet 4</h3>
+          <p>
+            The third design will provide a ‘racing’ animation, outlining the changes of console sales. As the year progresses, the horizontal bar chart will change values over time. The data is displayed in a descending order, therefore whenever a bar value is greater, it will move up a position. The animation stops at the end of the dataset. Users will be able to play/pause the animation, as well as seeing the data through the years. 
+          </p>
+          <p>
+            The second view will solely focus on a line chart, depicting the average rating based on genre, as well as a sales figure through the year. Users will be able to filter the data based on a specific genre, which the view will automatically updates based on the user’s choice. There will also be a motion chart which describe the changes in ratings, sales, games released based on game genres over the year. This information will purely be static.
+          </p>
+          <p><strong>Operations</strong></p>
+          <ul>
+            <li>
+              Selecting filters will automatically filter the chart with the chosen values, particularly in Consoles, Year range/year and Genres
+            </li>
+            <li>Choose and expand a console to view additional details</li>
+            <li>Change the animation control using the components in the visualisation</li>
+            <li>Sorting data based on ascending and descending order</li>
+            <li>Hover over data will display detailed information on the selected data</li>
+          </ul>
+          <p><strong>Advantages</strong></p>
+          <ul>
+            <li>
+              Comprehensiveness overview of all dimensions included
+            </li>
+            <li>Granular view of data upon user interaction, while keeping a general view</li>
+            <li>Interactivity allows more control over the chart</li>
+          </ul>
+          <p><strong>Drawbacks</strong></p>
+          <ul>
+            <li>
+              Technical complexity
+            </li>
+            <li>Some data does not have sufficient data in specific time periods</li>
+          </ul>
         </div>
         <div class="col-md-6">
-          <img src="img/5DS-Final_4.jpg" class="img-fluid" alt="Design sheet 1">
+          <img src="img/5DS-Final_4.jpg" class="img-fluid" alt="Design sheet 4">
         </div>
       </div>
+    <hr>
       <div class="row">
         <div class="col-md-6">
-          <img src="img/5DS-Final_5.jpg" class="img-fluid" alt="Design sheet 1">
+          <img src="img/5DS-Final_5.jpg" class="img-fluid" alt="Design sheet 5">
         </div>
         <div class="col-md-6">
           <h3 class="display-4"> Design sheet 5</h3>
+          <p>
+            After comparing between alternative designs, the final – or realisation sheet is developed. Figure 0-5 depicts the realisation sheet.
+          </p>
+          <p>
+            Expected tools and frameworks: <strong>HTML/CSS, JavaScript (Vanilla JS and D3.js)</strong>
+          </p>
+          <p>
+            Layout: console sales, video game ratings and sales by genre, overall data in a hierarchical bar design.
+            <p>
+              The first layout is the introduction to the topic. This was done by using D3js to recreate the ‘racing’ animation, depicting console sales through the years. It displays the sales performance of the consoles.
+            </p>
+            <p>
+              The second layout is a motion chart, providing the change in video game sales, ratings by year. The visualisation also includes number of games released in a year. As the year changes, the data gradually moves to the intended data in that particular point in time. Users will able to go to a specific year, as well as allow to pause/resume the animation.
+            </p>
+            <p>
+              The final layout is a hierarchical bar chart which displays overall sales of consoles. Interacting with the chart will elaborate the data which shows the game sales by genre. Users can freely choose any elements in these three layouts to explore sales and ratings of video games through the year.
+            </p>
+            <p>
+              A data table is considered to include. Users will be able to look at the processed data set prior to seeing them transformed into visualisations.
+            </p>
+          </p>
+          <p><strong>Some operations is expected in the project:</strong></p>
+          <ul>
+            <li>
+              <strong>Hover:</strong> Users can hover on data set to see detailed information of the element
+            </li>
+            <li><strong>Filter:</strong> Users can change the display of the chart by applying filters by time, consoles, or genre</li>
+          </ul>
         </div>
       </div>
 
